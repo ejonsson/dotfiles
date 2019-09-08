@@ -12,6 +12,7 @@ shopt -s checkwinsize
 
 
 export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 
 
@@ -55,8 +56,4 @@ fi
 fortune | cowsay | lolcat
 echo
 
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
 
