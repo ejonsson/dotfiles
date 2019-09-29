@@ -6,6 +6,8 @@ if [ "$(id -u)" != "0" ]; then
   exit 1
 fi
 
+pacman -Syy
+pacman -Syu
 
 pacman -S --needed \
   bash \
