@@ -1,15 +1,9 @@
 #!/bin/bash
 
-if [ "$(id -u)" != "0" ]; then
-  echo "This script must be run as root"
-  echo "Plese use sudo or su"
-  exit 1
-fi
+sudo pacman -Syy
+sudo pacman -Syu
 
-pacman -Syy
-pacman -Syu
-
-pacman -S --needed \
+sudo pacman -S --needed \
   bash \
   lsb-release \
   tmux \
@@ -40,7 +34,8 @@ pacman -S --needed \
   fortune-mod \
   lolcat \
   nodejs \
-  npm
+  npm \
+  lsof
 
 
 pip install virtualenv

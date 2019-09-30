@@ -1,14 +1,7 @@
 #!/bin/bash
 
-if [ "$(id -u)" != "0" ]; then
-  echo "This script must be run as root"
-  echo "Plese use sudo or su"
-  exit 1
-fi
-
-
-yum groupinstall "Development Tools"
-yum install \
+sudo yum groupinstall "Development Tools"
+sudo yum install \
   tmux \
   stow \
   p7zip \
